@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "shhell"
+version = "0.0.0"
+description = "Subprocess replacement with fancy API to build commands, typing and, hopefully, autocompletion  support ✨"
+readme = "readme.md"
+authors = ["Bobronium <appkiller16@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+plumbum = "^1.7.1"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.910"
+pyright = "^0.0.13"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+
+[tool.pyright]
+exclude = ["shhell/executables"]
+stubPath = ""
+reportMissingImports = true
+reportMissingTypeStubs = false
+
+pythonVersion = "3.10"
+pythonPlatform = "macOS"
